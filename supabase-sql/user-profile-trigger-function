@@ -1,0 +1,18 @@
+CREATE OR REPLACE FUNCTION public.handle_user_updates()
+RETURNS TRIGGER 
+LANGUAGE plpgsql 
+SECURITY DEFINER AS $$
+BEGIN
+  IF TG_OP = 'INSERT' THEN
+    -- Insert a new profile record for a new user
+    INSERT INTO public.profiles (id, email)
+    VALUES (NEW.id, NEW.email);
+  ELSIF TG_OP = 'UPDATE' THEN
+    -- Update the profile record for an existing user
+    UPDATE public.profiles
+    SET email = NEW.email
+    WHERE id = NEW.id;
+  END IF;
+  RETURN NEW;
+END;
+$$;

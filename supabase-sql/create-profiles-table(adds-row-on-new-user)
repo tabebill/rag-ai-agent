@@ -1,0 +1,9 @@
+create table public.profiles (
+  id uuid not null references auth.users on delete cascade,
+  email text,
+  full_name text,
+  avatar_url text,
+  primary key (id)
+);
+
+alter table public.profiles enable row level security;
