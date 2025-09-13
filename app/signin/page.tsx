@@ -78,7 +78,7 @@ const SignInPage = () => {
         </form>
 
         <p className="text-center text-purple-200 mt-6">
-          Have an account?
+          Don't have an account?
           <span
             className="text-purple-400 cursor-pointer hover:underline ml-2"
             onClick={() => router.push("/signup")}

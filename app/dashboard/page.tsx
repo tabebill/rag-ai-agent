@@ -11,18 +11,11 @@ interface Message {
   created_at: string;
 }
 
-interface User {
-  name: string;
-  email: string;
-  id: string;
-  user: string;
-}
-
 const WEBHOOK_URL = process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL;
 const BEARER_TOKEN = process.env.NEXT_PUBLIC_N8N_BEARER_TOKEN;
 
 const DashboardPage = () => {
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<any>(null);
   const [messages, setMessages] = useState<Message[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [newMessage, setNewMessage] = useState<string>("");
