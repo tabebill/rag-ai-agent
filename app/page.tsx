@@ -55,7 +55,7 @@ const LandingPage = () => {
       {/* Blurry container for text and buttons */}
       <div className="relative z-10 w-full max-w-3xl p-8 bg-black/40 backdrop-blur-md rounded-xl space-y-6 text-center">
         <h1 className="text-4xl sm:text-5xl font-extrabold text-white">
-          Hi, I&apos;m Jessie! 🏠✨
+          Hi, I&apos;m Bill! 🏠✨
         </h1>
         <p className="text-lg sm:text-xl text-purple-100">
           I&apos;m your friendly <strong>Commercial Real Estate AI 🤖</strong>.<br />
