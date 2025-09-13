@@ -32,7 +32,7 @@ const SignUpPage = () => {
       setAuthMessage(
         "Thank you for signing up! Now please go to your inbox and confirm your email."
       );
-    } catch (err: any) {
+    } catch (err: string) {
       console.error(err);
       setAuthMessage(err.message || "Something went wrong. Please try again.");
     } finally {
